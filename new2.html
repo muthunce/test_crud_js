@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+<body>
+<div  id="newslist">
+  
+</div>
+
+
+<div  id="ePaperList">
+  
+</div>
+
+<!-- <sript src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<sccript src='http://lovasoa.github.io/tidy-html5/tidy.js'></script>
+
+ <!-- <script id="rendered-js"> -->
+ <!-- $(document).ready(function(){ -->
+  <!-- var newsUrls =['https://tamil.oneindia.com/rss/tamil-news-fb.xml', -->
+                <!-- 'https://tamil.oneindia.com/rss/tamil-jobs-fb.xml', -->
+                <!-- 'https://tamil.filmibeat.com/rss/filmibeat-tamil-fb.xml', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://feeds.feedburner.com/dinamalar/latest_news.xml', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://feeds.feedburner.com/dinamalar/', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://trendsintamilnadu.blogspot.com/feeds/posts/default?alt=rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://trends.google.com/trends/hottrends/atom/feed?pn=p3',  -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://www.dinakaran.com/rss_districts.asp?id=30&cat=504', -->
+                <!-- 'https://tamil.goodreturns.in/rss/goodreturns-fb.xml', -->
+              	<!-- 'https://cors-anywhere.herokuapp.com/http://rss.dinamalar.com/?cat=business1', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://tamil.thehindu.com/business/?service=rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://www.thehindu.com/news/national/tamil-nadu/?service=rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://economictimes.indiatimes.com/rssfeedsdefault.cms', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://economictimes.indiatimes.com/small-biz/startups', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://agrifarmideas.blogspot.com/feeds/posts/default', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/nanayam.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/news.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/pasumai.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/sakthi.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/technology_news.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/ananda.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/junior.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/aval.rss', -->
+                <!-- 'http://rss.vikatan.com/feeds/chutti.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/motor.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/doctor.rss', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://www.dinakaran.com/rss_news.asp?id=15', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://bengaluru.citizenmatters.in/feed', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://patrikai.com/feed/', -->
+		            <!-- 'https://cors-anywhere.herokuapp.com/http://tamil.thehindu.com/india/rss/', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://feeds.dzone.com/webdev', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local?hl=en&gl=US&ned=us', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=www.vikatan.com%2Fpersonalfinance%2Findex.php&in_id_or_class=latest-news-list&url_contains=personalfinance', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=selfmotivationcoach.blogspot.com%2F&in_id_or_class=post-title&url_contains=', -->
+		            <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=www.gurugulam.com%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://gurukulamas.blogspot.com//feeds/posts/default?alt=rss', -->
+		            <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=aanmikam.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=whatsappuseful.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=parisupottigal.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=pettagum.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=eankankal.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=sashiga.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=www.bbc.com%2Ftamil%2Findia&in_id_or_class=hard-news-unit&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=writerasai.blogspot.in%2F&in_id_or_class=post-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Ftamil.yourstory.com%2F&in_id_or_class=block&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=www.newspaper.tamilanbazaar.com%2F&in_id_or_class=post-box-title&url_contains=', -->
+		            <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fdreamdth.com%2Fforums%2Fdd-free-dish.12%2F&in_id_or_class=js-threadList&url_contains=%2Fthreads', -->
+		            <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fgroups.google.com%2Fforum%2Fm%2F%23%21forum%2Fmca_nmc&in_id_or_class=&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fsenthilvayal.com%2F&in_id_or_class=entry-title&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/headlines/section/topic/TECHNOLOGY?ned=us&hl=en&gl=US', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fdzone.com%2Fweb-development-programming-tutorials-tools-news&in_id_or_class=&url_contains=%2Farticles%2F', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fwww.dailythanthi.com%2FDistricts%2Fbangalore&in_id_or_class=ListingNewsWithMEDImage&url_contains=News%2FDistricts', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=www.dailythanthi.com%2FDistricts%2Fthirunelveli&in_id_or_class=b-r&url_contains=', -->
+                <!-- 'https://cors-anywhere.herokuapp.com/http://createfeed.fivefilters.org/extract.php?url=www.maalaimalar.com%2FNews%2FDistrict%2Fthirunelveli&in_id_or_class=Listing&url_contains=' -->
+				  <!-- ] -->
+				  
+				  
+				   <!-- var newsUrls =['https://cors-anywhere.herokuapp.com/http://rss.vikatan.com/feeds/nanayam.rss'] -->
+       
+        <!-- function gethtml(){ -->
+        <!-- newsHtml="<ul>" -->
+           <!-- for (URL in newsUrls) { -->
+            <!-- newsHtml+="<h4>"+URL+ "." +newsUrls[URL]+"</h4>" -->
+            <!-- $.ajax({ -->
+                <!-- url: newsUrls[URL], -->
+                <!-- dataType: "text", -->
+                <!-- global: false, -->
+                <!-- async: false, //blocks window close -->
+				<!-- headers: { -->
+      <!-- "X-Requested-With": "XMLHttpRequest" -->
+    <!-- }, -->
+                <!-- success: function(data) { -->
+                     <!-- const myRe =/(\<title\>.*?\<\/title\>)/gm -->
+                     <!-- let matches = data.match(myRe); -->
+                     <!-- for (match in matches) { -->
+                        <!-- newsTitle=matches[match].replace("<title>", "").replace("</title>", "").replace("<![CDATA[","") -->
+                        <!-- newsHtml+="<li>"+newsTitle+"</li>" -->
+                        <!-- console.log(newsTitle ) -->
+                    <!-- } -->
+          
+                <!-- } -->
+            <!-- }); -->
+            
+        <!-- } -->
+           
+            <!-- newsHtml+="</ul><hr>" -->
+            <!-- return newsHtml -->
+        <!-- } -->
+        
+         <!-- news=gethtml() -->
+        <!-- $("#newslist").append(news)     -->
+    <!-- });         -->
+        <!-- </script> -->
+		
+		
+		
+		<script id="rendered-js">
+<!--  <h3>[^\0]*?<\/h3> -->
+<!-- /<h3\s*.*>\s*.*<\/h3>/gm -->
+   
+ let newsUrls = [
+
+		'https://cors-anywhere.herokuapp.com/http://nellaionline.net/',
+		 'https://tamil.oneindia.com/rss/tamil-fb.xml',
+ 'https://tamil.oneindia.com/rss/tamil-news-fb.xml',
+ 'https://cors-anywhere.herokuapp.com/https://www.dinamalar.com/latest_main.asp',
+ 'https://cors-anywhere.herokuapp.com/https://www.dailythanthi.com/thirunelveli',
+ 'https://cors-anywhere.herokuapp.com/https://www.dailythanthi.com/thirunelveli/2',
+ 'https://cors-anywhere.herokuapp.com/https://www.dailythanthi.com/news/karnataka/bangalore',
+ 'https://cors-anywhere.herokuapp.com/https://www.dailythanthi.com/news/karnataka/bangalore/2',
+ 
+ 
+   
+   'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/latest-news-tamil',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/tamilnadu',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/india',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/world',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/business',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/technology',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/crime',
+  'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/premium-articles',
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/opinion/editorial', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/opinion/columns', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/supplements/nalam-vazha', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/supplements/anantha-jothi', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/supplements/ilamai-puthumai', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/supplements/hindu-talkies', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/supplements/thisai-katti', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/vetrikodi/news', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/vetrikodi/today-special', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/careers', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/literature', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/serial', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/education', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/astrology', -->
+  <!-- 'https://cors-anywhere.herokuapp.com/https://www.hindutamil.in/news/spirituals', -->
+  
+  
+  
+ 
+ <!-- 'https://cors-anywhere.herokuapp.com/https://www.dailythanthi.com/thoothukudi', -->
+ <!-- 'https://cors-anywhere.herokuapp.com/https://www.maalaimalar.com/thirunelveli', -->
+ <!-- 'https://cors-anywhere.herokuapp.com/https://www.maalaimalar.com/', -->
+ 'https://cors-anywhere.herokuapp.com/https://www.dailythanthi.com/News/Karnataka/Bangalore',
+ 'https://www.dinamani.com/all-editions/edition-thirunelveli',
+ 'https://www.dinamani.com/all-editions/edition-thirunelveli/thirunelveli',
+ 
+ 
+   <!-- 'https://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fwww.dailythanthi.com%2FDistricts%2Fthirunelveli&item=.ListingNewsWithMEDImage&item_title=h3&max=5&order=document&referer=https%3A%2F%2Ffreshbusinesssolutions.blogspot.com%2F&guid=0&strip=&keep_qs_params=', -->
+   <!-- 'http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fwww.dailythanthi.com%2FDistricts%2Fthirunelveli&item=.ListingNewsWithMEDImage&item_title=h3&max=5&order=document&referer=http%3A%2F%2Fcreatefeed.fivefilters.org%2F&guid=0&strip=&keep_qs_params=', -->
+   
+   
+			<!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/juniorvikatan', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/news', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/latest-news', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/news/tamilnadu', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/business', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/nanayamvikatan', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/pasumaivikatan', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/sakthivikatan', -->
+		  <!-- 'https://cors-anywhere.herokuapp.com/https://www.vikatan.com/avalvikatan', -->
+		   <!-- 'https://cors-anywhere.herokuapp.com/https://pgbstory.blogspot.com/feeds/posts/default', -->
+		   <!-- 'https://cors-anywhere.herokuapp.com/https://avinashikidsworld.blogspot.com/feeds/posts/default' -->
+		  
+		  
+         <!-- 'https://www.vikatan.com/', -->
+		  <!-- 'https://www.vikatan.com/juniorvikatan', -->
+        <!-- 'https://www.vikatan.com/nanayamvikatan', -->
+        <!-- 'https://www.vikatan.com/pasumaivikatan', -->
+        <!-- 'https://www.vikatan.com/sakthivikatan', -->
+        <!-- 'https://www.vikatan.com/avalvikatan', -->
+        <!-- 'https://www.vikatan.com/tech-tamizha', -->
+        <!-- 'https://www.vikatan.com/doctorvikatan', -->
+        <!-- 'https://www.vikatan.com/chuttivikatan', -->
+		<!-- 'http://www.thehindu.com/news/national/tamil-nadu/?service=rss', -->
+		 <!-- 'http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=49&channelname=SUN+LIFE', -->
+   <!-- 'http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=3&channelname=KTV', -->
+   <!-- 'http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=1&channelname=SUN+TV', -->
+   <!-- 'http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=14&channelname=CHUTTI+TV', -->
+    <!-- 'https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=1539017', -->
+   <!-- 'https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=244&append=sources,cast,people', -->
+   <!-- 'https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=343&append=sources,cast,people', -->
+   <!-- 'https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=215&append=sources,cast,people', -->
+   <!-- 'https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=281&append=sources,cast,people' -->
+       
+ ]
+ 
+   <!-- newsUrls = [ -->
+ <!-- 'https://cors-anywhere.herokuapp.com/https://avinashikidsworld.blogspot.com/feeds/posts/default' -->
+   <!-- ] -->
+  
+       
+        async function gethtml(newsUrl, slNo){
+		newsHtml=""
+        
+            
+     		const response = await fetch(newsUrl);
+			let data = await response.text();
+			data = data.replace(/<link rel='http:\/\/schemas.google.com\/g\/2005#feed'.*?\/>/gm,"")
+			data = data.replace(/<link rel='self' type='application\/atom\+xml'.*?\/>/gm,"")
+			data = data.replace(/<link rel='hub'.*?'\/>/gm,"")
+			data = data.replace(/<link rel='next'.*?'\/>/gm,"")
+			data = data.replace(/<link rel='replies'.*?'\/>/gm,"")
+			data = data.replace(/<link rel='edit'.*?'\/>/gm,"")
+			const myRe =/<title.*?<\/title>/gm
+			const myreLink = /<link.*?https.*?>/gm
+			let matches = data.match(myRe);
+			let matchesLink = data.match(myreLink);
+			
+			newsHtml+="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			 for (match in matches) {
+						if(match <= 15){
+						
+						
+						
+                        newsTitle=matches[match].replace(/<title.*?>/gm, "").replace("</title>", "").replace("<![CDATA[","")
+						onlyHttpLink = matchesLink[match].match(/http.*?html/gm)
+						console.log(onlyHttpLink)
+						
+                        newsHtml+="<li> <b style='color:red'>"+match+"</b>. <a href='"+onlyHttpLink+ "' traget=_blank> "+newsTitle+" </a></li>"
+                        <!-- console.log(newsTitle ) -->
+						}
+						
+						if(match%5 == 0) {
+							newsHtml+="<li>.....</li>"
+						}
+                    }
+           
+            
+            newsHtml+="</ul><hr>"
+			$("#newslist").append(newsHtml)  
+			newsHtml=""
+            
+        }
+		
+		async function gethtmlPagewithh3(newsUrl,slNo){
+		console.log("HIIIIIIIIIIIIIIIIIIII")
+			newsHtml="";
+	
+			const response =  await fetch(newsUrl);
+			
+			
+			let data = await response.text();
+			console.log('data ::: ',data)
+			newData=data.replace(/<h3\s*.*?>/gm, "<h3>")
+			const myRe =/<h3>[^\0]*?<\/h3>/gm
+			let matches = newData.match(myRe);
+			
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			for (match in matches) {
+				if(match <= 15){
+				
+				
+				
+				newsTitle=matches[match].replace("<h3>", "").replace("</h3>", "")
+				newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". "+newsTitle+"</li>"
+				}
+				
+				if(match%5 == 0) {
+					newsHtml+="<li>.....</li>"
+				}
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		
+		async function gethtmlPagewithVIKATAN(newsUrl,slNo){
+		console.log("HIIIIIIIIIIIIIIIIIIII")
+			newsHtml="";
+	
+			const response =  await fetch(newsUrl);
+			
+			
+			let data = await response.text();
+			<!-- console.log('data ::: ',data) -->
+			<!-- newData=data.replace(/<h3\s*.*?>/gm, "<h3>") -->
+			const myRe =/<a aria-label="Read full .*?a>/gm
+			let matches = data.match(myRe);
+			
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			for (match in matches) {
+				if(match <= 15){
+				
+				
+				
+				newsTitle=matches[match].replace(/<div>.*?<h3.*?">/gm, "").replace(/<\/h3>.*<\/div>/gm, "").replace("<![CDATA[","")
+				console.log(newsTitle)
+				newsTitle=newsTitle.replace(/<figure.*?h3.*?">/gm, "").replace(/<\/h3>.*<\/div>/gm, "")
+				newsTitle=newsTitle.replace(/<div.*?>/gm, "").replace(/<\/div>/gm, "")
+				newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". "+newsTitle+"</li>"
+				}
+				
+				if(match%5 == 0) {
+				newsHtml+="<li>.....</li>"
+				}
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		
+				async function gethtmlPagewithh2(newsUrl,slNo){
+		console.log("HIIIIIIIIIIIIIIIIIIII with H2")
+			newsHtml="";
+	
+			const response =  await fetch(newsUrl);
+			
+			
+			let data = await response.text();
+			console.log('data ::: ',data)
+			newData=data.replace(/<h2\s*.*?>/gm, "<h2>")
+			const myRe =/<h2>[^\0]*?<\/h2>/gm
+			let matches = newData.match(myRe);
+			
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			for (match in matches) {
+				if(match <= 15){
+				
+				
+				
+				newsTitle=matches[match].replace("<h2>", "").replace("</h2>", "").replace("<![CDATA[","")
+				newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". "+newsTitle+"</li>"
+				}
+				
+				if(match%5 == 0) {
+					newsHtml+="<li>.....</li>"
+				}
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		
+		
+		async function gethtmlPagewithHINDU(newsUrl,slNo){
+		console.log("HIIIIIIIIIIIIIIIIIIII with HINDU")
+			newsHtml="";
+	
+			const response =  await fetch(newsUrl);
+			
+			
+			let data = await response.text();
+			console.log('data ::: ',data)
+			const myRe =/<a href="javascript:;".*whatsapp.*a>/gm
+			let matches = data.match(myRe);
+			
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			for (match in matches) {
+				if(match <= 15){
+				
+				newsTitle=matches[match].match(/data-title=".*?"/gm)
+				newsLink=matches[match].match(/data-href=".*?"/gm)
+				console.log(newsTitle)
+				newsTitle=newsTitle[0].replace('data-title="',"").replace(/"\s*$/, "");
+				newsLink=newsLink[0].replace('data-href="',"").replace(/"\s*$/, "");
+				newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". <a href="+newsLink+ " target=_blank />"+newsTitle+"</a></li>"
+				}
+				if(match%5 == 0) {
+				newsHtml+="<li>.....</li>"
+				}
+				
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		async function gethtmlPagewithDailyThanthi(newsUrl,slNo){
+		console.log("HIIIIIIIIIIIIIIIIIIII2")
+          myTitle = newsUrl.split('/').slice(3).join('/')
+			newsHtml="";
+	
+			const response =  await fetch(newsUrl);
+			
+			
+			let data = await response.text();
+			data=data.replace(/\r\n/gm, "")
+			data=data.replace(/<img *.*?>/gm, "")
+			const myRe =/<h3>.*?<a.*?<\/h3>/gm
+			
+			let matches = [...data.matchAll(myRe)];
+
+
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl.split('/').slice(3).join('/')+"</h4>\n<br/>"
+			let dailyThanthiNewsCount = 0
+            let maalaimalarNewsCount = 0
+            let maalaimalarNewsCount_New =0
+			for (match in matches) {
+				
+				if(match <= 30){
+                  console.log('matches ::: ',matches[match])
+				  
+				 
+                  
+                  
+                           if(newsUrl.includes('https://www.maalaimalar.com/')){
+						   
+						   
+						    if(maalaimalarNewsCount_New%5 == 0) {
+								newsHtml+="<li>.....</li>"
+							}
+				
+                     matches[match][0]=matches[match][0].replace(/\r\n/gm, "")
+                     matches[match][0]=matches[match][0].replace(/class="block"/gm, "")
+					 matches[match][0]=matches[match][0].replace(/<a.*?class="pull.*?<\/a>/gm, "")
+					 
+                     if(!matches[match][0].includes('<img')){
+                         maalaimalarNewsCount+=1
+                       	 if(maalaimalarNewsCount%2 != 0 && matches[match][0].length>=5) {
+                           maalaimalarNewsCount_New+=1
+                     	 	newsHtml+="<li> <b style='color:red'>"+maalaimalarNewsCount_New+"</b>" + ". "+matches[match][0]+"</li>"
+                         }
+                     } 
+                     
+                   }
+                  
+                  
+                   if(matches[match][0].includes("h3")) {
+				   
+				   if(dailyThanthiNewsCount%5 == 0) {
+						newsHtml+="<li>.....</li>"
+					}
+					
+                    matches[match][0]=matches[match][0].replace(/\r\n/gm, "")
+                    <!-- matches[match][0]=matches[match][0].replace(/<h3>/gm, "") -->
+                    matches[match][0]=matches[match][0].replace(/<\/h3>/gm, "")
+                    dailyThanthiNewsCount++;
+                    newsHtml+="<li> <b style='color:red'>"+dailyThanthiNewsCount+"</b>" + ". "+matches[match][0]+"</li>"
+					}
+                  
+          
+				}
+				
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		async function gethtmlPagewithh5(newsUrl,slNo){
+			newsHtml=""
+			const response = await fetch(newsUrl);
+			let data = await response.text();
+			data.replace(/<div.*?>/gm, "")
+			data.replace(/<\/div>/gm, "")
+			console.log('data ::: ',data)
+			const myRe =/<h5\s*.*>\s*.*<\/h5>/gm
+			let matches = data.match(myRe);
+			
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			for (match in matches) {
+			console.log("match :", match)
+				if(match <= 15){
+				newsTitle=matches[match].replace(/<h5\s*.*?>/gm, "").replace("</h5>", "").replace(/<div class="thumbnail">/gm,"")
+				newsTitle=newsTitle.replace(/<div.*?>/gm, "").replace(/<\/div>/gm, "").replace(/<img.*?>/gm," : ")
+				newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". "+newsTitle+"</li>"
+				}
+				
+				if(match%5 == 0) {
+					newsHtml+="<li>.....</li>"
+				}
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		async function gethtmlPagewithA(newsUrl,slNo){
+			newsHtml=""
+			const response = await fetch(newsUrl);
+			let data = await response.text();
+			console.log('data ::: ',data)
+			const myRe =/<a id="title-link" \s*.*>\s*.*<\/a>/gm
+			let matches = data.match(myRe);
+			
+			newsHtml="<ul>"
+			newsHtml+="<h4>"+newsUrl+"</h4>\n<br/>"
+			for (match in matches) {
+			console.log("match :", match)
+				if(match <= 15){
+				newsTitle=matches[match].replace(/<h5\s*.*?>/gm, "").replace("</h5>", "").replace("<![CDATA[","")
+				newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". "+newsTitle+"</li>"
+				}
+				
+				if(match%5 == 0) {
+					newsHtml+="<li>.....</li>"
+				}
+				
+            } 
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		async function gethtmlPagewithUL(newsUrl,slNo){
+			newsHtml=""
+			const response = await fetch(newsUrl);
+			let data = await response.text();
+			const myRe =/<div class="BlockContent-body"(.\s*)>(.*\n)*?.*.?<\/div>/gm
+			let matches = data.match(myRe);
+			
+			newsHtml="<h4>"+newsUrl+"</h4>"
+			newsHtml="<ul>"
+
+			if(matches.length > 2) {
+			
+				for (match in matches) {
+				console.log("match :", match)
+					if(match <= 0){
+					newsTitle=matches[match].replace(/<h5\s*.*?>/gm, "").replace("</h5>", "").replace("<![CDATA[","")
+					newsHtml+="<li> <b style='color:red'>"+match+"</b>" + ". "+newsTitle+"</li>"
+					}
+					
+				} 
+			} else {
+				newsHtml+="$$$$$$$$$$$$$$$$$$$$$"
+				newsHtml+=data
+				newsHtml+="$$$$$$$$$$$$$$$$$$$$$"
+			}
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		async function gethtmlPagewithSUN(newsUrl,slNo){
+			newsHtml=""
+			const response = await fetch(newsUrl);
+			let data = await response.text();
+			console.log("data :::::: ", data)
+			const myRe1 =/<div\s* id="lyr1">([\s\S]*?)<\/div>/gm
+			const myRe2 =/<tr *.*>([\s\S]*?)<\/tr>/gm
+			console.log('myRe1 :: ',myRe1)
+			let matches = data.match(myRe1);
+			matches = data.match(myRe2);
+			newsHtml="<h4>"+newsUrl+"</h4>"
+			newsHtml+="<ul>"
+
+			if(matches.length) {
+			
+				for (match in matches) {
+				console.log("match :", match)
+					
+						newsTitle=matches[match].replace(/<h5\s*.*?>/gm, "").replace("</h5>", "").replace("<![CDATA[","")
+						if(newsTitle.includes("Movie")){
+							newsHtml+="<li> <b style='color:red'>"+newsTitle+"</b></li>"
+						}else {
+						
+						newsHtml+="<li>"+newsTitle+"</li>"
+						}
+					
+				} 
+			} else {
+				newsHtml+="$$$$$$$$$$$$$$$$$$$$$"
+				newsHtml+=data
+				newsHtml+="$$$$$$$$$$$$$$$$$$$$$"
+			}
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+		
+		
+		async function gethtmlPagewithTVWIZ(newsUrl,slNo){
+			newsHtml=""
+			const response = await fetch(newsUrl);
+			let responseData = await response.text();
+			console.log("data :::::: ", responseData)
+			let responseParsedData = JSON.parse(responseData)
+			console.log("data :::::: ", responseParsedData["results"])
+			<!-- const myRe1 =/<div\s* class="list">([\s\S]*?)<\/div>/gm -->
+			<!-- const myRe2 =/<tr *.*>([\s\S]*?)<\/tr>/gm -->
+			<!-- console.log('myRe1 :: ',myRe1) -->
+			<!-- let matches = data.match(myRe1); -->
+			<!-- matches = data.match(myRe2); -->
+			
+			newsHtml="<h4>"+newsUrl+"</h4>"
+			newsHtml+="<ul>"
+
+			if(responseParsedData["results"].length) {
+			
+				for (match of responseParsedData["results"]) {
+				console.log("match :", match.program)
+					
+		
+						
+						newsHtml+="<li>"+match.program.name+" <sub>"+match.program.genre+ " - year: "+ match.program.releaseyear+" </sub><br/><img src="+match.program.poster+" height=53 width=75 /></li>"
+						
+
+					
+				} 
+			} else {
+				newsHtml+="$$$$$$$$$$$$$$$$$$$$$"
+				newsHtml+=data
+				newsHtml+="$$$$$$$$$$$$$$$$$$$$$"
+			}
+		   newsHtml+="</ul><hr>"
+		   $("#newslist").append(newsHtml)  
+		   newsHtml=""
+        }
+
+		
+		function AjaxFailed(result) {
+			alert("hello1");
+			alert(result.status + ' ' + result.statusText);
+			newsHtml="";
+			newsHtml="<h4>"+newsUrl+"</h4>";
+			newsHtml+="<hr>";
+		   $("#newslist").append(newsHtml);
+		   newsHtml="";
+		}
+		
+		
+		$.ajaxSetup({ cache: false });
+		
+		
+		
+		
+		<!-- Starting Loop -->
+        
+		async function newsCall(newsUrls) {
+		
+			for (URL in newsUrls) {
+			console.log('GMN :::', newsUrls[URL].trim())
+			if(
+			(newsUrls[URL].includes("www.dinamalar.com"))){
+			
+				//H2 dinamalar
+				news= gethtmlPagewithh2(newsUrls[URL], URL)
+			 
+			}else if (newsUrls[URL].trim().includes("www.vikatan.com")){
+			
+				//H3 Vikatan
+				 news= gethtmlPagewithVIKATAN(newsUrls[URL], URL)
+				 
+			}else if((newsUrls[URL].includes("https://www.dailythanthi.com/")) ||
+			(newsUrls[URL].includes("https://www.maalaimalar.com/"))){
+			
+			// DailyThanthi
+			news= gethtmlPagewithDailyThanthi(newsUrls[URL], URL)
+			
+			} else if((newsUrls[URL].includes("www.dinamani.com"))) {
+			
+			//H5 Dinamani
+			news= gethtmlPagewithh5(newsUrls[URL], URL)
+			
+			} else if((newsUrls[URL].includes("hindutamil.in/"))){
+			
+			//HINDU
+			news= gethtmlPagewithHINDU(newsUrls[URL], URL)
+			
+			}
+
+			else if((newsUrls[URL] =="https://www.youtube.com/")){
+			
+			news= gethtmlPagewithA(newsUrls[URL], URL)
+			
+			}
+			else if(newsUrls[URL].trim().includes("http://nellaionline.net/")){
+			
+			console.log('nellaionline.net matched')
+			news= gethtmlPagewithUL(newsUrls[URL], URL)
+			
+			}
+			else if( 
+			(newsUrls[URL].trim() == "http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=49&channelname=SUN+LIFE") ||
+			(newsUrls[URL].trim() == "http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=3&channelname=KTV") ||
+			(newsUrls[URL].trim() == "http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=1&channelname=SUN+TV") ||
+			(newsUrls[URL].trim() == "http://www.sunnetwork.in/tv-channel-details.aspx?Channelid=14&channelname=CHUTTI+TV") 
+			
+			){
+			console.log('sun life matched')
+			news= gethtmlPagewithSUN(newsUrls[URL], URL)
+			}
+			
+			else if( 
+			(newsUrls[URL].trim() == "https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=1539017") ||
+			(newsUrls[URL].trim() == "https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=244&append=sources,cast,people") ||
+			(newsUrls[URL].trim() == "https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=343&append=sources,cast,people") ||
+			(newsUrls[URL].trim() == "https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=215&append=sources,cast,people") ||
+			(newsUrls[URL].trim() == "https://tvwiz.in/api/channelPrograms?pageno=0&pagesize=10&channelid=281&append=sources,cast,people")
+			){
+			console.log('tvwiz matched')
+			news= gethtmlPagewithTVWIZ(newsUrls[URL], URL)
+			}
+			
+			else {
+				news=gethtml(newsUrls[URL], URL)
+			}
+				<!-- $("#newslist").append(news)   -->
+			}
+		
+		}
+		
+
+
+async function dummy(){
+newsHtml=""
+	newsHtml+="<a href=https://cors-anywhere.herokuapp.com/http://nellaionline.net/ target=_blank>test</a>"
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+}
+
+
+
+async function epaperDailyThanthi(newsUrl){
+
+	const response = await fetch(newsUrl);
+	let data = await response.text();
+	
+	console.log("%c data", "color:yellow", data)
+	data = data.replace(/\\\\/gm, "/")
+	
+	newsHtml=""
+	newsHtml="<h4>" +newsUrl+ "</h4>"
+	newsHtml+="<img src="+data+">"
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+	
+	console.log("data", data)
+
+}
+
+
+
+async function epaperTHEHINDU(newsUrl){
+
+	const response = await fetch(newsUrl);
+	let data = await response.text();
+	
+	<!-- console.log("%c data", "color:yellow", data) -->
+	
+	const myRe =/"lastEditionPublished":(.+?(?=,))/gm
+	console.log('myRe1 :: ',myRe)
+	let matches = data.match(myRe);
+	
+	console.log("matches", matches)
+	newData=matches[0].replace(/"lastEditionPublished":/gm, "")
+	console.log("newData", newData)
+
+
+	
+	newsHtml=""
+	newsHtml="<h4>" +newsUrl+ "</h4>"
+	newsHtml+="<img src='https://files.magzter.com/1523453197/"+newData+"/svg/1/1.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/1523453197/"+newData+"/svg/2/2.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/1523453197/"+newData+"/svg/3/3.jpg' width=1000 hight=600>"
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+	
+	
+
+}
+
+
+
+async function epaperTHEHINDUalt(newsUrl, publishid){
+
+	const response = await fetch(newsUrl);
+	let data = await response.text();
+	
+	<!-- console.log("%c data", "color:yellow", data) -->
+	
+	<!-- "editionName":"June 07, 2023"(.*?"editionImage)":(".*?") -->
+	
+	const myRe =/"lastEditionPublished":(.+?(?=,))/gm
+	console.log('myRe1 :: ',myRe)
+	let matches = data.match(myRe);
+	
+	console.log("matches", matches)
+	newData=matches[0].replace(/"lastEditionPublished":/gm, "")
+	console.log("newData", newData)
+
+
+	
+	newsHtml=""
+	newsHtml="<h4>" +newsUrl+ "</h4>"
+	newsHtml+="<img src='https://files.magzter.com/resize/magazine/"+publishid+"/"+newData+"/view/4.jpg' alt='https://files.magzter.com/resize/magazine/"+publishid+"/"+newData+"/view/4.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/2/thumb.jpg'  alt='https://files.magzter.com/"+publishid+"/"+newData+"/svg/2/thumb.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/3/thumb.jpg'  alt='https://files.magzter.com/"+publishid+"/"+newData+"/svg/3/thumb.jpg' width=1000 hight=600>"
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+	
+	
+
+}
+
+
+
+async function epaperTHEHINDU(newsUrl, publishid){
+
+	const response = await fetch(newsUrl);
+	let data = await response.text();
+	
+	<!-- console.log("%c data", "color:yellow", data) -->
+	
+	const myRe =/"lastEditionPublished":(.+?(?=,))/gm
+	console.log('myRe1 :: ',myRe)
+	let matches = data.match(myRe);
+	
+	console.log("matches", matches)
+	newData=matches[0].replace(/"lastEditionPublished":/gm, "")
+	console.log("newData", newData)
+
+
+	
+	newsHtml=""
+	newsHtml="<h4>" +newsUrl+ "</h4>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/1/1.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/2/2.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/3/3.jpg' width=1000 hight=600>"
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+	
+	
+
+}
+
+
+
+
+async function epaperDinamani(newsUrl, publishid){
+
+	const response = await fetch(newsUrl);
+	let data = await response.text();
+	
+	<!-- console.log("%c data", "color:yellow", data) -->
+	
+	const myRe =/"lastEditionPublished":(.+?(?=,))/gm
+	console.log('myRe1 :: ',myRe)
+	let matches = data.match(myRe);
+	
+	console.log("matches", matches)
+	newData=matches[0].replace(/"lastEditionPublished":/gm, "")
+	console.log("newData", newData)
+
+
+	
+	newsHtml=""
+	newsHtml="<h4>" +newsUrl+ "</h4>"
+	newsHtml+="<img src='https://files.magzter.com/resize/magazine/"+publishid+"/"+newData+"/view/4.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/2/thumb.jpg' width=1000 hight=600>"
+	newsHtml+="<img src='https://files.magzter.com/"+publishid+"/"+newData+"/svg/3/thumb.jpg' width=1000 hight=600>"
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+	
+	
+
+}
+
+
+
+async function getSVGURL(newsUrl){
+
+	const response = await fetch(newsUrl);
+	let data = await response.text();
+	
+	<!-- console.log("%c data", "color:yellow", data) -->
+	
+	const myRe =/"svgUrl":(.*?.svg.*?.")/gm
+	console.log('myRe1 :: ',myRe)
+	let matches = data.match(myRe);
+	
+	console.log("matches", matches)
+	newData=matches[0].replace(/"svgUrl":/gm, "")
+	newData1=matches[1].replace(/"svgUrl":/gm, "")
+	newData2=matches[2].replace(/"svgUrl":/gm, "")
+	console.log("newData", newData)
+	console.log("newData1", newData1)
+	console.log("newData2", newData2)
+
+
+	
+	newsHtml=""
+	newsHtml="<h4>" +newsUrl+ "</h4>"
+	newsHtml+="<img src="+newData+" width=1000 hight=600>"
+	newsHtml+="<img src="+newData1+" width=1000 hight=600>"
+	if(newData2.includes(".svg")){
+
+	newsHtml+="<div ><embed style='height:1600px' alt='main-image-2' src="+newData2+" class='jsx-4238621491 cn__images__main svgimage' ></embed></div>"
+
+	
+	
+	} else {
+	newsHtml+="<img src="+newData2+" width=1000 hight=600>"
+	
+	
+	}
+	$("#ePaperList").append(newsHtml)  
+	newsHtml=""
+	
+	
+
+}
+
+
+
+async function genCode(newsUrl, myObj){
+
+	const response = await fetch(newsUrl,{
+	 method: 'POST',
+  body: JSON.stringify(myObj),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  }
+  })
+	let data = await response.json();
+	console.log("data", data)
+	return data.code
+}
+
+		
+async function epaperCall(newsUrls) { 
+
+	for (URL in newsUrls) {
+		console.log('GMN :::', newsUrls[URL].trim())
+		
+		
+		if((newsUrls[URL].includes("https://epaper.dailythanthi.com"))){
+			console.log("epaper.dailythanthi.com")
+				epaperDailyThanthi(newsUrls[URL])
+		} else if((newsUrls[URL].includes("The-Hindu/Newspaper/"))){
+			console.log("THE HINDU", newsUrls[URL])
+			
+			epaperTHEHINDUalt(newsUrls[URL], 1523453197)
+			epaperTHEHINDU(newsUrls[URL], 1523453197)
+			
+		} else if((newsUrls[URL].includes("Dinamani-Tirunelveli/Newspaper/"))){
+		
+		
+		<!-- Tirunelveli -->
+		
+		<!-- https://sls.magzter.com/webuser/prod/genCode -->
+<!-- {"issue":"1339564","store_id":1,"user_con":"IN","readtype":"preview","userLang":"en","purType":7,"isnews":0,"ageRating":0,"dev":"web","mid":"20360"} -->
+let myurl = 'https://cors-anywhere.herokuapp.com/https://sls.magzter.com/webuser/prod/genCode'
+let myObj = {
+ "issue": "1339564",
+    "store_id": 1,
+    "user_con": "IN",
+    "readtype": "preview",
+    "userLang": "en",
+    "purType": 7,
+    "isnews": 0,
+    "ageRating": 0,
+    "dev": "web",
+    "mid": "20360"
+
+}
+
+
+let result = await genCode(myurl, myObj)
+console.log("%c result", "color:yellow", result )
+
+let newNewwsURL = 'https://cors-anywhere.herokuapp.com/https://reader.magzter.com/preview/'+result+'/1339564'
+
+console.log("newNewwsURL", newNewwsURL)
+
+			<!-- epaperDinamani(newsUrls[URL], 1574404609) -->
+			
+			getSVGURL(newNewwsURL)
+		
+		
+		
+		
+			<!-- epaperDinamani(newsUrls[URL], 1574666704) -->
+			
+			
+			
+		} else if((newsUrls[URL].includes("The-Hindu-Business-Line/Newspaper/"))) {
+			epaperTHEHINDU(newsUrls[URL], 1523453155)
+		}
+		else if((newsUrls[URL].includes("Malai-Murasu-Tirunelveli/Newspaper/"))) {
+			epaperTHEHINDU(newsUrls[URL], 1571032570)
+		}
+		
+		else if((newsUrls[URL].includes("The-New-Indian-Express-Chennai/Newspaper/"))) {
+		
+		
+		<!-- https://sls.magzter.com/webuser/prod/genCode -->
+		<!-- { -->
+    <!-- "issue": "1335224", -->
+    <!-- "store_id": 1, -->
+    <!-- "user_con": "IN", -->
+    <!-- "readtype": "preview", -->
+    <!-- "userLang": "en", -->
+    <!-- "purType": 7, -->
+    <!-- "isnews": 0, -->
+    <!-- "ageRating": 0, -->
+    <!-- "dev": "web", -->
+    <!-- "mid": "20308" -->
+<!-- } -->
+let myurl = 'https://cors-anywhere.herokuapp.com/https://sls.magzter.com/webuser/prod/genCode'
+let myObj = {
+ "issue": "1335224",
+    "store_id": 1,
+    "user_con": "IN",
+    "readtype": "preview",
+    "userLang": "en",
+    "purType": 7,
+    "isnews": 0,
+    "ageRating": 0,
+    "dev": "web",
+    "mid": "20308"
+
+}
+
+
+let result = genCode(myurl, myObj)
+console.log(result)
+
+let newNewwsURL = 'https://reader.magzter.com/preview/'+result+'/1339574'
+
+			epaperDinamani(newsUrls[URL], 1574404609)
+		}
+		
+		else if((newsUrls[URL].includes("The-New-Indian-Express-Bengaluru/Newspaper/"))) {
+		
+			epaperDinamani(newsUrls[URL], 1574406224)
+		}
+
+
+		
+			
+	}
+	
+	
+	
+}		
+		
+<!-- newsCall(newsUrls) -->
+
+
+ let ePaperURL = [
+
+		<!-- 'https://epaper.dailythanthi.com/Login/DefaultImage', -->
+		<!-- 'https://cors-anywhere.herokuapp.com/https://www.magzter.com/IN/THG-publishing-pvt-ltd/The-Hindu/Newspaper/', -->
+		'https://cors-anywhere.herokuapp.com/https://www.magzter.com/IN/Express-Network-Private-Limited/Dinamani-Tirunelveli/Newspaper/',
+		<!-- 'https://cors-anywhere.herokuapp.com/https://www.magzter.com/IN/THG-publishing-pvt-ltd/The-Hindu-Business-Line/Newspaper/', -->
+		<!-- 'https://cors-anywhere.herokuapp.com/https://www.magzter.com/IN/Malai-Murasu/Malai-Murasu-Tirunelveli/Newspaper/', -->
+		
+		
+		<!-- 'https://cors-anywhere.herokuapp.com/https://www.magzter.com/IN/Express-Network-Private-Limited/The-New-Indian-Express-Chennai/Newspaper/', -->
+		<!-- 'https://cors-anywhere.herokuapp.com/https://www.magzter.com/IN/Express-Network-Private-Limited/The-New-Indian-Express-Bengaluru/Newspaper/' -->
+]
+
+dummy()
+epaperCall(ePaperURL)
+            
+        </script>
+</body></html>
